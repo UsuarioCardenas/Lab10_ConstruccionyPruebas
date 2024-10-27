@@ -30,13 +30,13 @@ public class PetServiceTest {
     @Test
     public void testFindPetById() {
 
-        long ID = 1;
+        int ID = 1;
         String NAME = "Leo";
         Pet pet = null;
 
         try {
 
-            pet = petService.findById((int) ID);
+            pet = petService.findById(ID);
 
         } catch (PetNotFoundException e) {
             assertThat(e.getMessage(), false);
@@ -127,7 +127,7 @@ public class PetServiceTest {
         String PET_NAME = "Bear";
         int OWNER_ID = 1;
         int TYPE_ID = 1;
-        long create_id = -1;
+        int create_id = -1;
 
         String UP_PET_NAME = "Bear2";
         int UP_OWNER_ID = 2;
